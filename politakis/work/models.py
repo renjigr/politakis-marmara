@@ -19,6 +19,9 @@ class WorkModel(models.Model):
     image1 = models.ImageField(upload_to='images/%Y/%m/%d')
     image2 = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
     image3 = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
+    image4 = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
+    image5 = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
+    image6 = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
     description = models.CharField(max_length= 255,blank=True,null=True)
 
 
