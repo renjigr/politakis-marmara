@@ -20,10 +20,12 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'work/templates')
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4=s&(fwz7gp(od%=^^ey#7mnuj_ry1)nywtm9^+8(xp0sn5#b$'
+# SECRET_KEY = '4=s&(fwz7gp(od%=^^ey#7mnuj_ry1)nywtm9^+8(xp0sn5#b$'
+import os
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -37,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'easy_thumbnails',
-    'sortedm2m',
     'work',
 ]
 
@@ -132,10 +132,3 @@ MEDIA_URL ='/media/'
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-
-##thumbnail
-THUMBNAIL_ALIASES = {
-    '': {
-        'avatar': {'size': (225, 100), 'crop': True},
-    },
-}

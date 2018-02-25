@@ -1,7 +1,4 @@
 from django.db import models
-from django.utils.text import slugify
-from easy_thumbnails.fields import ThumbnailerImageField
-from django.template.defaultfilters import slugify
 from slugify import slugify_el
 # Create your models here.
 
