@@ -50,14 +50,14 @@ class WorkModel(models.Model):
 
 
 class IndexModel(models.Model):
-    name = models.CharField (max_length= 255, unique=True)
-    bathi = models.ImageField(upload_to='images/%Y/%m/%d')
-    outi = models.ImageField(upload_to='images/%Y/%m/%d')
-    cousinei = models.ImageField(upload_to='images/%Y/%m/%d')
-    floori = models.ImageField(upload_to='images/%Y/%m/%d')
-    fireplacei = models.ImageField(upload_to='images/%Y/%m/%d')
-    stairsi = models.ImageField(upload_to='images/%Y/%m/%d')
-    arti = models.ImageField(upload_to='images/%Y/%m/%d')
+    name = models.CharField (max_length= 255, unique=True,blank=True,null=True)
+    bath = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
+    out = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
+    cousine = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
+    floor = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
+    fireplace = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
+    stairs = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
+    art = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
 
     def __str__(self):
         return self.name

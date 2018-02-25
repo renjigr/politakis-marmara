@@ -7,7 +7,7 @@ from django.views import generic
 class IndexView(generic.ListView):
     model = models.IndexModel
     template_name = 'index.html'
-    context_object_name ='image_list'
+    context_object_name = 'image_list'
 
 
 class WorkListView(generic.ListView):
