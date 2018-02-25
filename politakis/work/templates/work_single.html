@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">{{details_view.name}}</h1>
+    {% if details_view.description %}
+    <p class="lead text-muted">{{details_view.description}}</p>
+    {% endif %}
+    <p>
+      {% if details_view.material_type == "marble" %}
+      <a href="{% url 'marble'%}"id="material_b"><button  type="button" class="btn btn-dark"><h2 class="text-center">Μάρμαρο</h2></button></a>
+      {% elif details_view.material_type == "granite"%}
+      <a href="{% url 'granite'%}"><button  type="button" class="btn btn-dark"><h2 class="text-center">Γρανίτης</h2></button></a>
+      {% else %}
+      <a href="{% url 'quartz'%}"><button  type="button" class="btn btn-dark"><h2 class="text-center">Χαλαζιακό</h2></button></a>
+      {% endif %}
+    </p>
+  </div>
+</section>
+
+
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+
+      <div class="row">
+            {% if details_view.image1 %}
+            <div class="col-md-4">
+
+                <a href="{{ details_view.image1.url}}"><img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="{{ details_view.image1.url}}"></a>
+
+
+            </div>
+            {% else %}
+            <p></p>
+            {% endif %}
+            {% if details_view.image2 %}
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <a href="{{ details_view.image2.url}}"><img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="{{ details_view.image2.url}}"></a>
+
+                </div>
+              </div>
+              {% else %}
+              <p></p>
+              {% endif %}
+
+
+            {% if details_view.image3 %}
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <a href="{{ details_view.image3.url}}"><img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="{{ details_view.image3.url}}"></a>
+
+                </div>
+              </div>
+              {% else %}
+              <p></p>
+            {% endif %}
+
+
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock content %}

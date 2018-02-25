@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Μάρμαρα Πολιτάκης</h1>
+          <p class="lead text-muted">Something short and leading about
+the collection below—its contents, the creator, etc. Make it short and
+sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <p>
+            <a href="{% url 'work'%}" class="btn btn-lg btn-primary my-2">Οι δουλείες</a>
+
+          </p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <a href="{% url 'bath'%}"><img class="card-img-top" data-src="holder.js/100px225" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                  src="{{ image_list.bathi.url }}"></a>
+                <div class="card-body">
+                  <h2 class="card-title">Μπάνια</h2>
+                  <div class="d-flex align-items-right">
+                    <div class="btn-group">
+                      <a href="{% url 'bath'%}"><button type="button" class="btn btn-sm btn-outline-secondary">Περισσότερα</button></a>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <a href="{% url 'out'%}"><img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                  src="{{image_list.outi.url}}">
+                </a>
+                <div class="card-body">
+                  <h2 class="card-title">Εξωτερικοί χώροι</h2>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <a href="{% url 'out'%}">  <button type="button" class="btn btn-sm btn-outline-secondary">Περισσότερα</button></a>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <a href="{% url 'cousines'%}">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                src="{{ image_list.cousinei.url }}" >
+                </a>
+                <div class="card-body">
+                  <h2 class="card-title">Κουζίνες</h2>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="{% url 'cousines'%}">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Περισσότερα</button>
+                    </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <a href="{% url 'floor'%}">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                src="{{ image_list.floori.url }}">
+                </a>
+                <div class="card-body">
+                <h2 class="card-title">Πάτωμα</h2>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="{% url 'floor'%}">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Περισσότερα</button>
+                      </a>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <a href="{% url 'fireplaces'%}">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                src="{{ image_list.fireplacei.url }}">
+              </a>
+                <div class="card-body">
+                  <h2 class="card-title">Τζάκια</h2>
+
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="{% url 'fireplaces'%}">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Περισσότερα</button>
+                      </a>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <a href="{% url 'stairs'%}">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                src="{{ image_list.stairsi.url }}">
+              </a>
+                <div class="card-body">
+                  <h2 class="card-title">Σκάλες</h2>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="{% url 'stairs'%}">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Περισσότερα</button>
+                      </a>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <a href="{% url 'art'%}">
+                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                  src="{{ image_list.arti.url }}">
+                </a>
+                <div class="card-body">
+                  <h2 class="card-title">Καλλιτεχνίματα</h2>
+
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="{% url 'art'%}">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Περισσότερα</button>
+                      </a>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+
+
+{% endblock content %}
