@@ -34,6 +34,7 @@ urlpatterns = [
     path('work/granite',views.GraniteListView.as_view(),name='granite'),
     path('work/quartz',views.QuartzListView.as_view(),name='quartz'),
     path('work/<slug>/',views.SingleView.as_view(), name ='work_details'),
+    path('where/',views.WhereView.as_view(), name ='where'),
 ]
 
 if settings.DEBUG:

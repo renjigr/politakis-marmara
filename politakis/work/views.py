@@ -70,6 +70,11 @@ class QuartzListView(generic.ListView):
     template_name = 'quartz_list.html'
     context_object_name = 'work_list'
 
+class WhereView(generic.ListView):
+    model= models.WhereModel
+    template_name = 'where.html'
+    context_object_name = 'shop'
+
 class SingleView(generic.DetailView):
     model = models.WorkModel
     template_name = 'work_single.html'

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Πολιτάκης Μάρμαρα</h1>
+
+  </div>
+</section>
+
+
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+
+
+        {% for s in shop %}
+
+
+            {% if s.photo %}
+            <div class="container text-center">
+
+
+                <a href="{{ s.photo.url }}"><img style="height:400px; width: 100%; display: block;" src="{{ s.photo.url }}"></a>
+
+
+            </div>
+            {% endif %}
+            {% endfor %}
+            <div class="container text-center">
+              <div class="jumbotron">
+                  <h3 class="jumbotron-text"> Το μαγαζί βρίσκεται :</h3>
+                  <h3 class="jumbotron-text"> Λακκα Καλογηρου</h3>
+
+
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1158.3379183517707!2d23.394427!3d37.9942992!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDU5JzQyLjAiTiAyM8KwMjMnNDEuNiJF!5e1!3m2!1sen!2sgr!4v1519661777050" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock content %}

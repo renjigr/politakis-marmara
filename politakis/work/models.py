@@ -64,3 +64,9 @@ class IndexModel(models.Model):
 
     def __str__(self):
         return self.name
+
+class WhereModel(models.Model):
+    photo = models.ImageField(upload_to='images/%Y/%m/%d',blank=True,null=True)
+
+    def _str_(self):
+        return 'Μαγαζί'
